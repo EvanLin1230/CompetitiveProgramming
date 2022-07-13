@@ -125,4 +125,3 @@ vector<string> bomberMan(int n, vector<string> grid) {
     }
 
 }
-Footer
