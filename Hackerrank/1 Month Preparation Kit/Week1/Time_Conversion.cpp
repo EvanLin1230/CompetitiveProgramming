@@ -2,12 +2,9 @@
     # Type of Time:
     # 00:12:12AM => No change(00, AM)
     # 12:12:12AM => No change(00, AM)
-    # 24:12:12AM => change(24, AM) -> (00)
     # 00:12:12PM => NO change(00, AM)
     # 06:12:12PM => change(06, PM) -> (18)
     # 12:12:12PM => change(12, PM) -> (00)
-    # 19:12:12PM => No change(19, PM)
-    # 24:12:12PM => change(24, PM) -> (00)
 */
 
 string intToString(int integer){
