@@ -14,13 +14,13 @@ even pages : Ex. 6 pages, half of pages = 3 -> (5,1) (4,1) (3,1) (2,1) (1,0)
 
 int pageCount(int n, int p) {
     int result = 0;
-    int pageFrom = 0;
-    if(n%2 == 0){
-        n+=1;
+    int pageFrom = 1;
+    if(n%2 != 0){
+        n-=1;
     }
     if(n/2 >= p){
         //from first page
-        while(pageFrom+1<p){
+        while(pageFrom<p){
             result ++;
             pageFrom+=2;
         }
@@ -28,7 +28,7 @@ int pageCount(int n, int p) {
     else{
         //from last page
         pageFrom = n;
-        while(p+1<pageFrom){
+        while(p<pageFrom){
             result++;
             p+=2;
         }
