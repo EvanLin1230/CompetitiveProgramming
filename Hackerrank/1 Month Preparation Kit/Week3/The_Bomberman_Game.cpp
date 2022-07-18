@@ -70,7 +70,6 @@ vector<string> bomberMan(int n, vector<string> grid) {
                 }
             }
         }
-        // if n is bigger than 3...
         // reverse the grid;
         for(int i=0;i<grid.size();i++){
             for(int j=0;j<grid[i].size();j++){
@@ -85,37 +84,6 @@ vector<string> bomberMan(int n, vector<string> grid) {
         // 3 7 11 ... is same kind of solution
         // 5 9 13 ... is another same kind of solution
         // means when 5, it calculate the result using 3's answer to make another result
-        /*
-          6 7 X
-          .......
-          ...O.O.
-          ....O..
-          ..O....
-          OO...OO
-          OO.O...
-          6 7 3 Result
-          OOO.O.O
-          OO.....
-          OO....O
-          .......
-          .......
-          .......
-          6 7 5 Result
-          .......
-          ...O.O.
-          ...OO..
-          ..OOOO.
-          OOOOOOO
-          OOOOOOO
-          6 7 7 Result
-          OOO.O.O
-          OO.....
-          OO....O
-          .......
-          .......
-          .......
-          
-        */
         if((n - 3)%4 == 0){
             return grid;
         }
