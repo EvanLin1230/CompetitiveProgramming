@@ -34,6 +34,14 @@ SinglyLinkedListNode {
 3. 然後準備一個儲存答案的節點，每次分離出來的節點都要指向這個儲存答案的節點
 4. 預計做法就是，Result為儲存答案，Back為儲存剩餘未存入Result的節點們，Temp為將Back的第一個節點分離出來，存入Result。
 5. 中間流程的重點是，我們不能讓其中一個節點，失去了他的連結，唯一可以失去後面連結的是Temp，因為他的使命就是幫助Back分離出他的節點。
+6. 結合以上的資訊，我們的目標就是守住back與他後面的節點，並分離back第一個節點存進Result裏
+
+Temp = Back -> next; (暫存Back後面的節點)
+Back -> next = Result; (將Back第一個節點存進Result)
+Result = Back; (將存進去的那個節點，設置為Result的第一個節點)
+Back = Temp; (將Back預存進Temp的節點還給Back，好讓後面可以重複執行)
+
+以上只要外面加個while判斷Back是否為空節點，處理好base case就完成了
 
 疑問
 ---
